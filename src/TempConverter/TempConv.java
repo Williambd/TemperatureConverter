@@ -1,11 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Temperature Converter
+ * Created by WilliamBD 
+ * on 23/04/2018
+ * to convert fahrenheit to celius and vis-versa
  */
-
 package TempConverter;
-
 
 /**
  *
@@ -122,9 +121,9 @@ public class TempConv extends javax.swing.JFrame {
 
     private void ExcecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcecuteActionPerformed
         double temp = Double.parseDouble(Temp.getText());
-        if (FOrC.getSelectedIndex()==0){
+        if (FOrC.getSelectedIndex() == 0) {
             fahrenheitToCelsius(temp);
-        }else{
+        } else {
             celsiusToFahrenheit(temp);
         }
     }//GEN-LAST:event_ExcecuteActionPerformed
@@ -132,19 +131,19 @@ public class TempConv extends javax.swing.JFrame {
     private void FOrCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FOrCActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_FOrCActionPerformed
-    
+
     public void fahrenheitToCelsius(double fTemp) {
         double cTemp;
-        cTemp = (double)5/(double)9*(fTemp - 32);
+        cTemp = (double) 5 / (double) 9 * (fTemp - 32);
         Output.setText("The Celsius temperature is " + cTemp);
     }
-    
-    
+
     public void celsiusToFahrenheit(double cTemp) {
         double fTemp;
-        fTemp = (double)9/(double)5*cTemp + 32;
+        fTemp = (double) 9 / (double) 5 * cTemp + 32;
         Output.setText("The Fahrenheit temperature is " + fTemp);
-       }
+    }
+
     /**
      * @param args the command line arguments
      */
