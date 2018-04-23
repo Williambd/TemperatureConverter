@@ -120,6 +120,7 @@ public class TempConv extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ExcecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcecuteActionPerformed
+        //takes temp, then converts F->C or C->F depending on bar
         double temp = Double.parseDouble(Temp.getText());
         if (FOrC.getSelectedIndex() == 0) {
             fahrenheitToCelsius(temp);
@@ -132,12 +133,14 @@ public class TempConv extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_FOrCActionPerformed
 
+    //takes the inputted temperature in F, and converts to C, then outputs.
     public void fahrenheitToCelsius(double fTemp) {
         double cTemp;
         cTemp = (double) 5 / (double) 9 * (fTemp - 32);
         Output.setText("The Celsius temperature is " + cTemp);
     }
-
+    
+    //takes the inputted temperature in C, and converts to F, then outputs.
     public void celsiusToFahrenheit(double cTemp) {
         double fTemp;
         fTemp = (double) 9 / (double) 5 * cTemp + 32;
